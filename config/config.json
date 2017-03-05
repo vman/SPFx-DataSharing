@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/userDetails/UserDetailsWebPart.js",
+      "manifest": "./src/webparts/userDetails/UserDetailsWebPart.manifest.json",
+      "outputPath": "./dist/user-details.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "userDetailsStrings": "webparts/userDetails/loc/{locale}.js"
+  }
+}

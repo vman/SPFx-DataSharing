@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "libraryName": "data-sharing-sample",
+    "framework": "none",
+    "version": "1.0.0",
+    "libraryId": "f8149ae2-df34-487a-b3c0-0c030e09dfbd"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "data-sharing-sample-client-side-solution",
+    "id": "f8149ae2-df34-487a-b3c0-0c030e09dfbd",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/data-sharing-sample.sppkg"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "7af2ff9a-841b-4e84-82b4-ebf8362d7234",
+  "alias": "UserDetailsWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "7af2ff9a-841b-4e84-82b4-ebf8362d7234",
+    "group": { "default": "Under Development" },
+    "title": { "default": "UserDetails" },
+    "description": { "default": "WebPart to get details aboout the current user" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "UserDetails"
+    }
+  }]
+}
