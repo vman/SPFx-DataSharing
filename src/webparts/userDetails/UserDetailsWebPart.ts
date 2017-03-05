@@ -10,7 +10,24 @@ import styles from './UserDetails.module.scss';
 import * as strings from 'userDetailsStrings';
 import { IUserDetailsWebPartProps } from './IUserDetailsWebPartProps';
 
+import { ServiceScope } from '@microsoft/sp-core-library';
+import { IUserProfileService } from '../../interfaces';
+import { UserProfileService } from '../../services/UserProfileService';
+
+
 export default class UserDetailsWebPart extends BaseClientSideWebPart<IUserDetailsWebPartProps> {
+
+  private userProfileService: IUserProfileService;
+
+  protected onInit(): Promise<void> {
+    return new Promise<void>((resolve: () => void, reject: (error: any) => void): void => {
+      const serviceScope: ServiceScope = this.context.serviceScope.getParent();
+      serviceScope.whenFinished((): void => {
+        this.userProfileService = serviceScope.consume(UserProfileService.serviceKey);
+        resolve();
+      });
+    });
+  }
 
   public render(): void {
     this.domElement.innerHTML = `
@@ -28,6 +45,12 @@ export default class UserDetailsWebPart extends BaseClientSideWebPart<IUserDetai
           </div>
         </div>
       </div>`;
+
+      this.userProfileService.getAllPropertiesForCurrentUser().then((responseJSON: any)=>{
+          console.log(responseJSON);
+      });
+      
+       
   }
 
   protected get dataVersion(): Version {
